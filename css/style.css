@@ -1,1 +1,63 @@
-CSS
+/* CSS */
+
+/* Generell layout */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.2em;
+  color: #222;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.2em;
+  color: #444;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1em;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Lenker */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #777;
+}
+
