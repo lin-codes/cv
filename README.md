@@ -6,6 +6,7 @@ Dette er en digital versjon av min CV, laget som en nettside via GitHub Pages.
 ## Innhold
 - HTML-basert nettside som viser min profesjonelle CV
 - Enkel styling med CSS for et ryddig utseende
+- Implementert dynamisk visning av seksjoner i CV-en, slik at brukeren kan klikke på ikoner for å utvide eller skjule detaljer, noe som gir en ryddigere opplevelse og bedre brukerflyt.
 
 ## Teknologi
 - HTML5
