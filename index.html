@@ -9,11 +9,13 @@
 <body>
   <header>
     <h1>Linda Thanh Vo</h1>
-    <p class="subtitle">Autorisert audiograf & IT-student</p>
+    <p class="subtitle">Registered Audiologist and IT-student</p>
+    <button id="darkModeBtn">🌙 Toggle Dark Mode</button>
+    <button id="downloadBtn">📥 Download CV (PDF)</button>
   </header>
 
   <section class="contact">
-    <h2>Kontaktinfo</h2>
+    <h2>Contact</h2>
     <p>
       Smalgangen 3, 0188 Oslo, Norway <br>
       (+47) 92673216 <br>
@@ -22,17 +24,8 @@
     </p>
   </section>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>
-      As an authorized audiologist in Norway, I have gained expertise in fitting and adjusting hearing aids
-      and conducted detailed hearing evaluations and auditory processing tests. After nearly 5 years as an audiologist,
-      I am now studying to become an IT-specialist and hoping one day to get a job in the IT field at a hearing aid company.
-    </p>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
+  <section id="skills">
+    <h2>Skills <button class="toggleBtn" data-target="skills">Hide</button></h2>
     <ul>
       <li>Patient communication and care</li>
       <li>Hearing aids & hearing tests</li>
@@ -41,17 +34,8 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <p><strong>University of South-Eastern Norway</strong> (Aug 2024 – Present)<br>
-    Bachelor’s degree in IT and Information Systems</p>
-
-    <p><strong>NTNU Faculty of Medicine and Health Sciences</strong> (Aug 2016 – Jul 2019)<br>
-    Bachelor’s degree in Audiology</p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
+  <section id="experience">
+    <h2>Experience <button class="toggleBtn" data-target="experience">Hide</button></h2>
     <p><strong>Registered Audiologist | Christiania ØNH, Oslo</strong> (Apr 2024 – Present)</p>
     <p><strong>Registered Audiologist | Stavanger University Hospital</strong> (Jan 2020 – Feb 2024)</p>
   </section>
@@ -59,5 +43,7 @@
   <footer>
     <p>© 2025 Linda Thanh Vo</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
