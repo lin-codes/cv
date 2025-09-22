@@ -1,86 +1,207 @@
-/* CSS */
-
-/* Generell layout */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  background: #f9f9f9;
-  color: #333;
+  text-align: center;
+  background: #f3f7e9;
+  margin: 0;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  max-width: 1400px;
 }
 
-/* Headings */
 h1 {
-  font-size: 2.2em;
-  margin-bottom: 0.2em;
-  color: #222;
+  font-size: 1.6em;
+  color: #e8f0da;
 }
 
-h2 {
-  font-size: 1.4em;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.2em;
-  color: #444;
+
+a:link {
+  color: #2d521f;        /* standard lenke */
+  text-decoration: none; /* fjerner understrek */
 }
 
-.subtitle {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 1em;
-}
-
-/* Sections */
-section {
-  margin-bottom: 2rem;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-/* Lenker */
-a {
-  color: #0066cc;
-  text-decoration: none;
+a:visited {
+  color: rgb(189, 140, 131);      /* lenke man har besøkt */
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #98bd82;    /* når du hover over */
+  text-decoration: underline; 
 }
 
-/* Footer */
-footer {
+.socials {
+  margin-top: 260px;
+  margin-left: -260px;
+  left: 0%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(30%);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+
+/* Timeline layout */
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1300px;
+}
+
+/* Stor sirkel */
+.big-circle {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(180deg, #819e78, #e5eee3);
+  color: #3d633d;
+  border-radius: 50%;
+  border: 4px solid #cad3bd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* midt i stedet for nederst */
+  padding: 20px;
   text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #777;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  background: #222;
-  color: #eee;
+.big-circle img {
+  position: absolute;
+  top: -75px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #949e85;
+  box-shadow: 0 4px 12px #000000;
 }
 
-body.dark-mode a {
-  color: #66aaff;
+.big-circle p {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.5;
 }
 
-button {
-  margin: 5px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  background: #0066cc;
-  color: white;
+/* Zigzag og små sirkler */
+.zigzag-wrapper {
+  position: relative;
+  flex: 1;
+  overflow: visible;
+}
+
+.zigzag {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  transform: translateY(-20px);
+  z-index: 0;
+  pointer-events: none; /* Viktig for å ikke blokkere klikk på sirklene */
+}
+
+
+.small-circles {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+  margin-top: -50px;
+  margin-left: 70px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.small-circle:nth-child(odd) {
+  margin-top: -40px; /* flytter noen opp */
+}
+
+.small-circle:nth-child(even) {
+  margin-top: 40px;  /* flytter noen ned */
+}
+
+.small-circle {
+  width: 135px;
+  height: 135px;
+  z-index: 1;
+  border-radius: 50%;
+  border: 2px solid #b8c2ab;
+  background: #cad3bd;
+  color: #000;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-button:hover {
-  background: #004c99;
+.small-circle:hover {
+  background: #b3cca5;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  color: #f0f6ed;
+  
 }
+
+/* Infoboksene */
+.details {
+  max-width: 750px;
+  height: 280px;
+  margin: -130px 190px 20px auto;
+  background: #fcfff7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  opacity: 0;
+  transform: translateY(-30px); /* 👈 starter litt over */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.details.show {
+  opacity: 1;
+  transform: translateY(0); /* glir ned på plass */
+}
+
+.hidden {
+  display: none;
+}
+
+.details ul {
+  list-style-position: inside; /* flytter bullets inn til teksten */
+  padding-left: 0;             /* fjerner standard venstremarg */
+  text-align: center;          /* sentrerer hele lista */
+}
+
+.details li {
+  margin: 6px 0; /* litt luft mellom punktene */
+}
+
+
+footer {
+  position: fixed;       /* gjør den fastlåst */
+  bottom: 0;             /* alltid nederst */
+  left: 0;
+  width: 100%;           /* full bredde */
+  background: #b7c8b4;      /* bakgrunn så tekst ikke overlapper innhold */
+  padding: 10px 0;
+  text-align: center;
+  color: #3a4a34;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1); /* liten skygge for tydelighet */
+  z-index: 10;           /* alltid foran linjer og seksjoner */
+}
+

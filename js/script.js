@@ -1,32 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // 🔘 Toggle Dark Mode
-  const darkModeBtn = document.getElementById("darkModeBtn");
-  darkModeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
+document.querySelectorAll(".small-circle[data-section]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.section;
+    const section = document.getElementById(target);
 
-  // 📥 Download CV (lenke til PDF i repo)
-  const downloadBtn = document.getElementById("downloadBtn");
-  downloadBtn.addEventListener("click", () => {
-    window.open("CV.pdf", "_blank"); // legg CV.pdf i repo-roten
-  });
+    if (!section) return;
 
-  // 🔽 Toggle sections (show/hide)
-  const toggleBtns = document.querySelectorAll(".toggleBtn");
-  toggleBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetId = btn.getAttribute("data-target");
-      const section = document.getElementById(targetId);
+    // Hvis seksjonen er synlig: lukk den
+    if (section.classList.contains("show")) {
+      section.classList.remove("show");
+      setTimeout(() => section.classList.add("hidden"), 400); // matcher transition-tid
+    } 
+    else {
+      // Skjul alle andre seksjoner først
+      document.querySelectorAll(".details").forEach(d => {
+        d.classList.remove("show");
+        d.classList.add("hidden");
+      });
 
-      // Finn første UL eller P inni section
-      const content = section.querySelector("ul, p");
-      if (content.style.display === "none") {
-        content.style.display = "";
-        btn.textContent = "Hide";
-      } else {
-        content.style.display = "none";
-        btn.textContent = "Show";
-      }
-    });
+      // Vis valgt seksjon
+      section.classList.remove("hidden");
+      setTimeout(() => section.classList.add("show"), 10);
+    }
   });
 });

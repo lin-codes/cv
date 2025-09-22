@@ -1,49 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linda Thanh Vo - CV</title>
+  <title>CV – Linda Thanh Vo</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Linda Thanh Vo</h1>
-    <p class="subtitle">Registered Audiologist and IT-student</p>
-    <button id="darkModeBtn">🌙 Toggle Dark Mode</button>
-    <button id="downloadBtn">📥 Download CV (PDF)</button>
-  </header>
 
-  <section class="contact">
-    <h2>Contact</h2>
+<div class="timeline">
+  <!-- Stor sirkel -->
+  <div class="big-circle">
+    <img src="https://cdn.discordapp.com/attachments/723583349221752843/1419664736513036408/image31.jpg?ex=68d29551&is=68d143d1&hm=dab6d61d2596d9c37db9908b666ea3073f5a80c80aeea20eab278091f8bb1d47" alt="Profilbilde">
+    <br><br>
+    <h1 style="position: relative; top: 10px;">Linda Thanh Vo</h1>
+    <br><br><br><br>
     <p>
-      Smalgangen 3, 0188 Oslo, Norway <br>
-      (+47) 92673216 <br>
-      <a href="mailto:lindav.contact@gmail.com">lindav.contact@gmail.com</a><br>
-      <a href="https://www.linkedin.com/in/linda-vo-4ab482288/" target="_blank">LinkedIn</a>
-    </p>
+      Oslo, Norge<br>
+    </div>    
+      
+  <div class="socials">
+    <a href="mailto:lindav.contact@gmail.com" target="_blank">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/014/440/980/small_2x/email-message-icon-design-in-blue-circle-png.png" alt="E-post">
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/linda-vo-4ab482288/" target="_blank">
+      <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-512.png" alt="LinkedIn">
+    </a>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/lin-codes" target="_blank">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/free-github-icon-svg-download-png-3073768.png?f=webp" alt="GitHub">
+    </a>
+  </div>
+      </p>
+
+  <!-- Zig-zag linje med små sirkler -->
+  <div class="zigzag-wrapper">
+    <svg viewBox="30 10 800 250" preserveAspectRatio="none" class="zigzag">
+      <polyline points="90,-20 280,150 340,200 540,20 820,240"
+                fill="none" stroke="#404E3B" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+
+    <div class="small-circles">
+      <button class="small-circle" data-section="utdanning">Utdanning</button>
+      <button class="small-circle" data-section="erfaring">Erfaringer</button>
+      <button class="small-circle" data-section="nokkel">Nøkkel-<br>kvalifikasjoner</button>
+      <button class="small-circle" data-section="ferdigheter">Ferdigheter</button>
+    </div>
+  </div>
+</div>
+
+<!-- Seksjoner -->
+<section id="utdanning" class="details hidden">
+  <h2>Utdanning</h2>
+  <p><b>USN (Universitetet i Sørøst-Norge) Ringerike</b><br>
+    Bachelor i IT og informasjonssystemer (2024 - Nåværende)</p>
+
+  <p><b>NTNU (Norges Teknisk-Naturvitenskapelige Universitet)</b><br>
+    Bachelor i Audiologi (2016 - 2019)</p>
+
+  <p><b>Trondheim Katedralskole VGS</b><br>
+    Studiespesialisering (2012 - 2015)</p>
+</section>
+
+<section id="erfaring" class="details hidden">
+  <h2>Erfaringer</h2>
+  <p><b>Christiania Øre-Nese-Halsklinikk (Asklepion AS), Oslo</b><br>Audiograf & sekretær (2024 - Nåværende)</p>
+
+  <p><b>Stavanger Universitetssykehus, Stavanger</b><br>
+    Audiograf (2020 - 2024)</p>
+
+  <p><b>Sabrura Sushi & Sticks City Lade, Trondheim</b><br>
+  Servitør & kassemedarbeider (2017 - 2019)</p>
+</section>
+
+<section id="nokkel" class="details hidden">
+  <h2>Nøkkelkvalifikasjoner</h2>
+  <ul>
+    <li>Pasient- og kundekommunikasjon</li>
+    <li>Serviceinnstilt og løsningsorientert</li>
+    <li>Evne til effektivt samarbeid i team og selvstendig arbeid</li>
+    <li>Tilpasningsdyktig og lærevillig</li>
+    <li>Systematisk og detaljorientert</li>
+    <li>Effektiv og strukturert, selv i hektiske perioder</li>
+    <li>Lang arbeidserfaring og evne til å balansere studier med jobb</li>
+  </ul>
   </section>
+    
+<section id="ferdigheter" class="details hidden">
+  <h2>Ferdigheter</h2>
+  <ul>
+    <li>Pasientbehandling og tilpasning av høreapparater, samt gjennomføring av ulike hørselstester</li>
+    <li>Journalføring i ulike journalsystemer, blant annet DIPS Arena, Infodoc og CGM</li>
+    <li>Programmering med Python (grunnleggende), Java (nybegynnende), JavaScript (nybegynnende)</li>
+    <li>Erfaring med databaser: MySQL & PostgreSQL</li>
+    <li>Systemanalyse og datamodellering (Use Caser, DFD, datamodeller, datakataloger)</li>
+    <li>Webutvikling: HTML, CSS, UI/UX</li>
+    <li>Kjennskap til Git og GitHub (i læringsfase)</li>
+    <br>
+    <li><b>Språk:</b> Norsk (flytende), engelsk (flytende) & vietnamesisk (middels)</li>
+  </ul>
+</section>
 
-  <section id="skills">
-    <h2>Skills <button class="toggleBtn" data-target="skills">Hide</button></h2>
-    <ul>
-      <li>Patient communication and care</li>
-      <li>Hearing aids & hearing tests</li>
-      <li>mySQL, Python, Web Development</li>
-      <li>Languages: Norwegian, English (fluent), Vietnamese (intermediate)</li>
-    </ul>
-  </section>
+<footer>© 2025 Linda Thanh Vo | <a href="https://github.com/lin-codes">GitHub</a></footer>
 
-  <section id="experience">
-    <h2>Experience <button class="toggleBtn" data-target="experience">Hide</button></h2>
-    <p><strong>Registered Audiologist | Christiania ØNH, Oslo</strong> (Apr 2024 – Present)</p>
-    <p><strong>Registered Audiologist | Stavanger University Hospital</strong> (Jan 2020 – Feb 2024)</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Linda Thanh Vo</p>
-  </footer>
-
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
