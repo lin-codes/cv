@@ -147,14 +147,13 @@ a:hover {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .small-circle:hover {
   background: #b3cca5;
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   color: #f0f6ed;
-  
 }
 
 /* Infoboksene */
